@@ -85,3 +85,92 @@
   Basi di Dati(6 cfu)
 **Università degli Studi di Napoli Parthenope**
 🌍 Askos Tours - Tour Operator Information System
+
+
+# Askos Tours - Tour Operator Information System
+
+**Askos Tours** is an information system built with Django for the complete management of tours, guides, clients, and bookings. The project supports separate registration flows for clients and staff, tour management, language filters, reviews, and personalized dashboards.
+
+---
+
+## 📌 Implemented Features
+
+### 👤 Clients
+- Registration with Tax ID, email, preferred language, phone number.
+- Login via Tax ID and password.
+- Viewing available tours.
+- Filtering tours by preferred language.
+- Tour booking (only if the date is in the future).
+- Booking cancellation (only before the date).
+- Reviewing completed tours (only one per tour).
+- Viewing booked tours.
+
+### 🧭 Staff (Guides / Drivers)
+- Registration with multiple selection of spoken languages.
+- Login via Tax ID and password.
+- Viewing assigned future tours (guide or driver).
+
+### 🗺️ Tours
+- Each tour is associated with:
+  - one language
+  - one or more guides
+  - one or more drivers
+- Viewing booked participants.
+- Visibility only if the date is still in the future.
+
+### ⭐ Reviews
+- Clients can only review past tours they have attended.
+- All reviews are publicly visible on a dedicated page.
+
+### 🔐 Administrator (Admin)
+- Complete management from the Django panel:
+  - Tours
+  - Clients
+  - Staff
+  - Languages
+  - Bookings
+  - Reviews
+
+---
+
+## ▶️ How to Start the Project
+
+1. Run the migrations to create the tables:
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+2. **Create a superuser** to access the admin panel:
+   ```bash
+   python manage.py createsuperuser
+   ```
+3. **Start the Django server:**
+   ```bash
+   python manage.py runserver
+   ```
+4. Access the app at `http://127.0.0.1:8000/`.
+
+---
+
+## 👨‍🏫 User Access
+
+- **Clients**:
+  - Autonomous registration via the app.
+  - Login with Tax ID.
+
+- **Staff** (Guide / Driver):
+  - Autonomous registration with language selection.
+  - Personalized access to view future tours.
+
+- **Admin**:
+  - Access from `http://127.0.0.1:8000/admin`
+  - Adding tours with assignment of title, duration, price, language, guide, and driver.
+  - Complete data management.
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **Author**:
+  Paolo Desiderio 
+  **Course**:
+  Databases (6 cfu)
+**University of Naples Parthenope**
+🌍 Askos Tours - Tour Operator Information System
